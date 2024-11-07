@@ -1,3 +1,5 @@
 # Web Development
 
-[Home_Page](#https://lumied.netlify.app/)
+- [ ] Home Page - [Preview](https://lumied.netlify.app/)
+- [ ] Welcome Mail - [Preview](https://welcomemail.netlify.app/)
+- [ ] OTP Mail - [Preview](https://otpmail.netlify.app/)
