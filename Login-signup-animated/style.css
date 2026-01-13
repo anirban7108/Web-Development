@@ -1,0 +1,397 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-bg-color:#a7d0ff;
+    --sub-bg-color:#2f005e;
+    --white-bg-color:#ffffff;
+    --black-bg-color:#000000;
+    --light-grey-bg-color:#9299a833;
+    --grey-bg-color:#1b1b1d61;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--light-grey-bg-color);
+}
+
+.container{
+    position: relative;
+    width: 55vw;
+    height: 73vh;
+    border-radius: 30px;
+    background-color: var(--white-bg-color);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+    overflow: hidden;
+    margin: 3vh;
+}
+
+.container h1{
+    font-size: 7vh;
+}
+
+.form-login{
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 40px;
+    transition: .5s ease-in-out 0.5s, visibility 0s .5s;
+    z-index: 1;
+}
+
+.container.active .form-login{
+    right: 50%;
+    visibility: hidden;
+}
+
+form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login{
+    padding: 25px 40px;
+}
+
+.text{
+    width: 100%;
+    height: 50%;
+}
+
+/* .form-login h1{
+    font-size: 5vh;
+    margin: -2vh 0;
+} */
+
+.input-box{
+    position: relative;
+    width: 100%;
+    margin: 4vh 0;
+}
+
+.input-box input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 12px 40px;
+    background-color: var(--light-grey-bg-color);
+    color: var(--black-bg-color);
+    border-radius: 14px;
+    border: none;
+    outline: none;
+    font-size: 2vh;
+}
+
+.input-box i{
+    position: absolute;
+    padding: 10px;
+    color: var(--black-bg-color) ;
+    font-size: 3vh;
+}
+
+.forgot-password{
+    margin: -2vh 0 2vh;
+}
+
+.forgot-password a{
+    color: var(--black-bg-color);
+    text-decoration: none;
+}
+
+.btn{
+    width: 100%;
+    height: 60px;
+    background-color: var(--sub-bg-color);
+    border-radius: 8px;
+    /* box-shadow: var(--black-bg-color); */
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--white-bg-color);
+    font-weight: bold;
+}
+
+.container hr{
+    margin: 2vh 0 1.5vh 0;
+    width: 100%;
+    border-radius: 30px;
+    color: var(--light-grey-bg-color);
+}
+
+.container p{
+    font-size: 2vh;
+    margin: 0 0 10px;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social a{
+    padding: 1.5vh;
+    border-radius: 8px;
+    border:1px solid var(--grey-bg-color);
+    font-size: 3vh;
+    color: var(--black-bg-color);
+    text-decoration: none;
+    margin: 1vh 1vw;
+}
+
+.register{
+    visibility: hidden;
+}
+
+.container.active .form-login.register{
+    visibility: visible;
+}
+
+.register .input-box{
+    margin: 2.5vh 0;
+}
+
+.register p{
+    margin: 0 0 1.5vh;
+}
+
+.social hr {
+    margin: 2.5vh 0 1.5vh 0;
+}
+
+.toggle-box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.toggle-box::before{
+    content: '';
+    position: absolute;
+    width: 300%;
+    height: 100%;
+    left: -250%;
+    border-radius: 150px;
+    background-color: var(--sub-bg-color);
+    z-index: 2;
+    transition: 1s ease-in-out;
+}
+
+.container.active .toggle-box::before{
+    left: 50%;
+}
+
+.toggle-panel{
+    position: absolute;
+    /* margin: 0 4.5vw; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-bg-color);
+    z-index: 2;
+    transition: .5s ease-in-out;
+}
+
+.toggle-panel.toggle-left{
+    left: 0;
+    transition-delay: .5s;
+}
+
+.container.active .toggle-panel.toggle-left{
+    left: -50%;
+    /* transition-delay: .2s; */
+}
+
+.toggle-panel h1{
+    padding: 0 10px;
+    display: flex;
+    text-align: center;
+}
+
+.toggle-panel p{
+    margin: 2.5vh;
+}
+
+.toggle-panel .btn{
+    height: 45px;
+    width: 100px;
+    background: transparent;
+    border: 2px solid white;
+    box-shadow: none;
+}
+
+.toggle-panel.toggle-right{
+    right: -50%;
+    /* transition-delay: .1s;   */
+}
+
+.container.active .toggle-panel.toggle-right{
+    right: 0;
+    transition-delay: .5s;
+}
+
+/* @media screen and (max-width:943px) {
+    .container{
+        height: 90vh;
+        width: 90vw;
+    }
+} */
+
+@media screen and (min-width:1420px) {
+    .login{
+        padding: 70px 40px;
+    }
+
+    .toggle-panel .btn{
+        font-size: 35px;
+        height: 56px;
+        width: 168px;
+    }
+
+    .btn{
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container{
+        height: 95vh;
+        width: 90vw;
+    }
+
+    .form-login{
+        bottom: 0;
+        width: 100%;
+        height: 70%;
+    }
+
+    /* .form-login.login{
+        height: 89%;
+    } */
+
+    .form-login.register{
+        height: 89%;
+    }
+
+    .container.active .form-login{
+        right: 0;
+        bottom: 20%;
+    }
+
+    .container.active .register{
+        bottom: 17%;
+    }
+
+    .register .text {
+        height: 45%;
+    }
+
+    .toggle-box::before{
+        left: 0;
+        top: -269%;
+        width: 100%;
+        height: 300%;
+        border-radius: 20vw;
+    }
+
+    .container.active .toggle-box::before{
+        left: 0;
+        top: 77%;
+    }
+
+    .toggle-panel{
+        width: 100%;
+        height: 30%;
+        margin: 0 0;
+    }
+
+    .toggle-right{
+        height: 24%;
+    }
+
+    .toggle-panel.toggle-left{
+        top: 0;
+        transition-delay: 0.1s;
+    }
+
+    .container.active .toggle-panel.toggle-left{
+        left: 0;
+        top: -20%;
+        visibility: hidden; 
+    }
+
+    .toggle-panel.toggle-right{
+        right: 0;
+        bottom: -20%;
+        visibility: hidden;
+    }
+
+    .container.active .toggle-panel.toggle-right{
+        bottom: 0;
+        visibility: visible;
+    }
+
+    .toggle-panel p{
+        margin: 1.5vh;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .btn{
+        font-size: 10px;
+    }
+
+    .toggle-panel{
+        font-size: 15px;
+    }
+
+    .toggle-panel .btn{
+        width: 30vw;
+    }
+
+    .container hr{
+        margin: 1vh 0 1vh 0;
+    }
+
+    .register p{
+        margin: 0 0 1vh;
+    }
+
+    /* .input-box input{
+        padding: 13px 40px;
+    } */
+
+    .btn{
+        font-size: 22px;
+    }
+
+    .container h1{
+        font-size:5vh;
+    }
+}

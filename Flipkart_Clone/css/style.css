@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+:root {
+    --main-bg-color: #000080;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: var(--main-bg-color);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+nav li a:hover {
+    font-weight: bolder;
+}
+
+.logo {
+    width: 30vw;
+}
+
+.logo img,
+.user img {
+    height: 50px;
+    width: 50px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: start;
+}
+
+.user img:hover,
+.logo img:hover {
+    height: 54px;
+    padding: 0 8px;
+}
+
+header ul {
+    height: 9vh;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    list-style: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 0 2vw;
+    font-family: 'Lato', sans-serif;
+}
+
+.nav-end {
+    display: flex;
+    width: 30vw;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search-icon img {
+    height: 25px;
+}
+
+.search-icon {
+    position: relative;
+    right: 62px;
+    cursor: pointer;
+}
+
+.search input {
+    width: 15vw;
+    height: 5vh;
+    border-radius: 10px;
+    padding: 0 10px;
+    margin: 0 30px;
+}
+
+.contaner {
+    min-height: calc(100vh - 17vh);
+}
+
+.slider img {
+    height: 40vh;
+    width: 95vw;
+    margin: 2vh;
+}
+
+.slider {
+    display: flex;
+    overflow: auto;
+    /* animation-name: slider-scroll;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation-play-state: running;
+    animation-duration: 10s; */
+}
+
+/* @keyframes slider-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    25%{
+        transform: translateX(-95vw);
+    }
+
+    50%{
+        transform: translateX(-1905vw);
+    }
+
+    75% {
+        transform: translateX(-285vw);
+    }
+
+    100% {
+        transform: translateX(-380vw);
+    }
+} */
+
+.card{
+    margin: 0 5vw;
+}
+
+.card-all-item{
+    display: flex;
+    overflow: hidden;
+}
+
+.card-item img{
+    height: 15vh;
+    width: 7vw;
+}
+
+.card-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3vh 3vw 0 0;
+}
+
+footer {
+    height: 9vh;
+    background: var(--main-bg-color);
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
