@@ -8,6 +8,8 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-color: black;
+    color: rgba(176, 169, 169, 0.821);
 }
 
 #top{
@@ -17,7 +19,6 @@ body{
     display: flex;
     align-self: flex-start;
     justify-content: center;
-    /* gap: 10px; */
 }
 
 #buttom{
@@ -37,8 +38,28 @@ h2 svg{
 }
 
 h3 svg{
-    padding-top: 10px;
+    padding:30px -5px 0;
     height: 5vh;
     width: 10vw;
     font-weight: bolder;
+}
+
+@media screen and (max-width: 500px) {
+    h2 svg{
+        position: relative;
+        top: 25vh;
+    }
+    h1{
+        position: relative;
+        top: -25vh;
+        font-size: 30vh;
+    }
+    #plus{
+        position: relative;
+        right: 10vw;
+    }
+    #minus{
+        position: relative;
+        left: 10vw;
+    }
 }

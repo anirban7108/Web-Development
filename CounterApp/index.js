@@ -1,9 +1,11 @@
+let body=document.querySelector("body");
 let info=document.getElementById("info");
-let gear=document.getElementById("gear");
 let reset=document.getElementById("reset");
 let count=document.getElementById("count");
 let plus=document.getElementById("plus");
 let minus=document.getElementById("minus");
+let light=document.getElementById("light");
+let dark=document.getElementById("dark");
 
 let counter=0
 
@@ -35,4 +37,20 @@ document.addEventListener("keydown",(event)=>{
     else if(event.key=="-"){
         Decrement();
     }
+})
+
+dark.style.display="none";
+
+light.addEventListener("dblclick",()=>{
+    body.style.backgroundColor="white";
+    body.style.color="black";
+    dark.style.display="block";
+    light.style.display="none";
+})
+
+dark.addEventListener("dblclick",()=>{
+    body.style.backgroundColor="black";
+    body.style.color="rgba(176, 169, 169, 0.821)";
+    light.style.display="block";
+    dark.style.display="none";
 })
