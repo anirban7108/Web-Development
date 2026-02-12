@@ -6,7 +6,6 @@ let plus = document.getElementById("plus");
 let minus = document.getElementById("minus");
 let light = document.getElementById("light");
 let dark = document.getElementById("dark");
-let container = count.parentElement;
 
 
 let counter = 0;

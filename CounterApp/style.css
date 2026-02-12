@@ -43,15 +43,6 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 10vw;
-    white-space: nowrap;   /* start with single line */
-    overflow-wrap: break-word;
-    text-align: center;
-}
-
-h1{
-    white-space: nowrap;   /* start with single line */
-    overflow-wrap: break-word;
-    text-align: center;
 }
 
 
