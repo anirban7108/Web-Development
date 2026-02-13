@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Checker</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <nav>
+        <h1>Password Checker</h1>
+    </nav>
+    <form action="">
+        <div id="input">
+            <input type="text" name="password" id="password" placeholder="Enter Your Password">
+            <i class="bi bi-clipboard2" id="clipboard-blank" title="Copy"></i>
+            <i class="bi bi-clipboard2-check-fill" id="clipboard-check-fill" title="Copied"></i>
+        </div>
+        <h2></h2>
+        <button type="button"><i class="bi bi-stars" id="stars"></i><p>Generate</p></button>
+    </form>
+
+    <div id="section2">
+        <div id="para">
+            <p class="char" id="char8">
+                <i class="bi bi-check-lg tick"></i>
+                <i class="bi bi-x-lg wrong"></i>
+                    At Least 8 charecter
+            </p>
+            <p class="char" id="number">
+                <i class="bi bi-check-lg tick"></i>
+                <i class="bi bi-x-lg wrong"></i>
+                At Least 1 Number
+            </p>
+            <p class="char" id="upper1">
+                <i class="bi bi-check-lg tick"></i>
+                <i class="bi bi-x-lg wrong"></i>
+                At Least 1 Upper Case
+            </p>
+            <p class="char" id="lower1">
+                <i class="bi bi-check-lg tick"></i>
+                <i class="bi bi-x-lg wrong"></i>
+                At Least 1 Lower Case
+            </p>
+            <p class="char" id="symbol">
+                <i class="bi bi-check-lg tick"></i>
+                <i class="bi bi-x-lg wrong"></i>
+                At Least 1 Symbol
+            </p>
+            <p class="char" id="rec10">
+                <i class="bi bi-check-lg tick"></i>
+                <i class="bi bi-x-lg wrong"></i>
+                Recomended 10 charecter
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

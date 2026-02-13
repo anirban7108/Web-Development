@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows:10% auto auto;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    grid-area: 1/1/2/2;
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    grid-area: 2/1/3/2;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+input{
+    padding: 10px 20px 10px 30px;
+    border-radius: 30px;
+    width: 50vw;
+    height: 10vh;
+    font-size: larger;
+}
+
+#clipboard-check-fill, #clipboard-blank{
+    font-size: 30px;
+    position: absolute;
+    right: 20px;
+    align-self: center;
+}
+
+button{
+    width: 15vw;
+    height: 10vh;
+    font-size: 2vw;
+    text-align: center;
+    position: relative;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 20% auto;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 2vw;
+}
+
+button i{
+    grid-area: 1/1/3/2;
+    font-size: 30px;
+}
+
+button p{
+    grid-area: 1/2/2/4;
+}
+
+#stars{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: -1vw;
+}
+
+
+#section2{
+    width: 100%;
+    grid-area: 3/1/4/2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: red;
+}
+
+#para p{
+    padding: 5px 0;
+    font-size: 20px;
+}
+
+.tick{
+    display: none;
+}
+
+p i{
+    position: relative;
+    top: 4px;
+    padding-right: 5px;
+    font-size: 30px;
+}
+
+p .tick{
+    height: 20px;
+    width: 40px;
+}
+
+@media screen and (max-width:500px) {
+    body{
+        grid-template-rows:7% auto 50%;
+    }
+    input{
+        width: 80vw;
+        height: 9vh;
+    }
+    button{
+        width: 50vw;
+        height: 9vh;
+        font-size: 8vw;
+    }
+    #stars{
+        left: 1vw;
+    }
+}
