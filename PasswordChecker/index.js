@@ -69,7 +69,7 @@ function Strong(password){
     }else if (length >= 8) {
         char8tick.style.display = "inline-block"
         char8wrong.style.display = "none"
-        char8.style.color = "rgb(255, 230, 0)";
+        char8.style.color = "rgb(216 197 25)";
         flag++;} else {
         char8wrong.style.display = "inline-block"
         char8tick.style.display = "none"
@@ -124,13 +124,13 @@ function Strong(password){
         h2.style.color = "green";
     } else if (flag >= 5 && upper >= 1 && lower >= 1 && num >= 1 && sym >= 1) {
         h2.innerText = "Mediam Password";
-        h2.style.color = "rgb(255, 230, 0)";
+        h2.style.color = "rgb(216 197 25)";
     } else if (length > 0) {
         h2.innerText = "Low Password";
         h2.style.color = "red";
     } else {
         h2.innerText = "Check Password Strength";
-        h2.style.color = "white";
+        h2.style.color = "#333";
     }
 }
 
