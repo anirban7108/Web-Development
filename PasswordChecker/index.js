@@ -27,14 +27,10 @@ let symbol1 = document.getElementById("symbol");
 let symbol1tick = document.querySelector("#symbol .tick");
 let symbol1wrong = document.querySelector("#symbol .wrong");
 
-let rec10 = document.getElementById("rec10");
-let rec10tick = document.querySelector("#rec10 .tick");
-let rec10wrong = document.querySelector("#rec10 .wrong");
-
 
 h2.innerText = "Check Password Strength";
 clipboardCheck.style.display = "none";
-clipboard.style.color="grey";
+clipboard.style.color="rgb(227, 220, 220)";
 
 let lower = 0, upper = 0, sym = 0, num = 0, flag = 0,length=0;
 
@@ -65,12 +61,16 @@ function Strong(password){
     }else{
         clipboard.style.color="black";
     }
-    if (length >= 8) {
+    if (length >= 10) {
         char8tick.style.display = "inline-block"
         char8wrong.style.display = "none"
         char8.style.color = "green";
         flag++;
-    } else {
+    }else if (length >= 8) {
+        char8tick.style.display = "inline-block"
+        char8wrong.style.display = "none"
+        char8.style.color = "rgb(255, 230, 0)";
+        flag++;} else {
         char8wrong.style.display = "inline-block"
         char8tick.style.display = "none"
         char8.style.color = "red";
@@ -117,16 +117,6 @@ function Strong(password){
         symbol1tick.style.display = "none"
         symbol1wrong.style.display = "inline-block"
         symbol1.style.color = "red";
-    }
-    if (length >= 10) {
-        rec10tick.style.display = "inline-block"
-        rec10wrong.style.display = "none"
-        rec10.style.color = "green";
-        flag++;
-    } else {
-        rec10tick.style.display = "none"
-        rec10wrong.style.display = "inline-block"
-        rec10.style.color = "red";
     }
 
     if (length >= 10 && flag >= 5 && upper >= 1 && lower >= 1 && num >= 1 && sym >= 1 && (upper >= 2 || lower >= 2 || num >= 2 || sym >= 2)) {
