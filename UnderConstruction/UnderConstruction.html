@@ -1,144 +1,173 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Under Construction</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Mulish";
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Mulish";
+      }
 
-        #mainDiv {
-            height: 100vh;
-            width: 100vw;
-            background: linear-gradient(135deg, rgba(91, 124, 250, 1) 15%, rgba(136, 84, 208, 1) 85%);
-            color: rgba(255, 255, 255, 0.779);
-            display: grid;
-            justify-content: center;
-            align-items: center;
-        }
+      #mainDiv {
+        height: 100vh;
+        width: 100vw;
+        background: linear-gradient(
+          135deg,
+          rgba(91, 124, 250, 1) 15%,
+          rgba(136, 84, 208, 1) 85%
+        );
+        color: rgba(255, 255, 255, 0.779);
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
 
+      img {
+        width: 8vw;
+      }
+
+      #subDiv {
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        justify-items: center;
+        align-items: center;
+      }
+
+      h1,
+      h3 {
+        margin: 15px;
+      }
+
+      h1 {
+        font-size: 3vw;
+        font-weight: bolder;
+      }
+
+      h3 {
+        font-size: 1.8vw;
+      }
+
+      p {
+        font-size: 1vw;
+      }
+
+      #subDiv {
+        width: 70vw;
+      }
+
+      @media screen and (max-width: 1500px) {
         img {
-            width: 8vw;
-        }
-
-        #subDiv {
-            width: 50vw;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            justify-items: center;
-            align-items: center;
-        }
-
-        h1,
-        h3 {
-            margin: 15px;
+          width: 15vw;
         }
 
         h1 {
-            font-size: 3vw;
-            font-weight: bolder;
+          font-size: 5vw;
         }
 
         h3 {
-            font-size: 1.8vw;
+          font-size: 3vw;
         }
 
         p {
-            font-size: 1vw;
+          font-size: 2vw;
+        }
+      }
+
+      @media screen and (max-width: 1100px) {
+        img {
+          width: 16vw;
+        }
+
+        h1 {
+          font-size: 6vw;
+        }
+
+        h3 {
+          font-size: 4vw;
+        }
+
+        p {
+          font-size: 3vw;
         }
 
         #subDiv {
-            width: 70vw;
+          width: 95vw;
+        }
+      }
+
+      #redirect {
+        font-weight: bolder;
+        font-size: 2vw;
+        text-align: center;
+      }
+
+      @media screen and (max-width: 900px) {
+        img {
+          width: 20vw;
+        }
+      }
+
+      @media screen and (max-width: 800px) {
+        img {
+          width: 25vw;
         }
 
-        @media screen and (max-width:1500px) {
-            img {
-                width: 15vw;
-            }
-
-            h1 {
-                font-size: 5vw;
-            }
-
-            h3 {
-                font-size: 3vw;
-            }
-
-            p {
-                font-size: 2vw;
-            }
+        h1 {
+          font-size: 10vw;
         }
 
-        @media screen and (max-width:1100px) {
-            img {
-                width: 16vw;
-            }
-
-            h1 {
-                font-size: 6vw;
-            }
-
-            h3 {
-                font-size: 4vw;
-            }
-
-            p {
-                font-size: 3vw;
-            }
-
-            #subDiv {
-                width: 95vw;
-            }
+        h3 {
+          font-size: 6vw;
         }
 
-        @media screen and (max-width:900px) {
-            img {
-                width: 20vw;
-            }
+        p {
+          font-size: 4vw;
         }
-
-        @media screen and (max-width:800px) {
-            img {
-                width: 25vw;
-            }
-
-            h1 {
-                font-size: 10vw;
-            }
-
-            h3 {
-                font-size: 6vw;
-            }
-
-            p {
-                font-size: 4vw;
-            }
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div id="mainDiv">
-        <div id="subDiv">
-            <img src="./img/UnderConstruction.png" alt="img">
-            <h1>Under Construction</h1>
-            <h3>We're Building Something Great</h3>
-            <p>Our website is currently undergoing scheduled maintenance and updates.</p>
-            <p>We'll be back soon with an improved experience!</p>
-        </div>
+      <div id="subDiv">
+        <img src="./img/UnderConstruction.png" alt="img" />
+        <h1>Under Construction</h1>
+        <h3>We're Building Something Great</h3>
+        <p>
+          Our website is currently undergoing scheduled maintenance and updates.
+        </p>
+        <p>We'll be back soon with an improved experience!</p>
+      </div>
+      <span id="redirect"
+        >Redirecting you to the demo page in
+        <span id="sec"></span> seconds...</span
+      >
     </div>
-</body>
 
+    <script defer>
+      document.addEventListener("DOMContentLoaded", () => {
+        let sec = document.getElementById("sec");
+        let time = 3;
+        sec.innerText = time;
+        let intevel=setInterval(() => {
+            time--;
+            sec.innerText=time;
+            if(time<=0){
+                clearInterval(intevel);
+                window.location.replace("../demo.html");
+            }
+        }, 1000);
+      });
+    </script>
+  </body>
 </html>
